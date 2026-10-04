@@ -1,0 +1,8 @@
+exec docker run -it --rm \
+  --name moonlight \
+  --env DISPLAY \
+  --env XAUTHORITY=/tmp/xauth \
+  --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
+  --volume $XAUTHORITY:/tmp/xauth:ro \
+  --volume ~/.config/moonlight:"/root/.config/Moonlight Game Streaming Project" \
+  docker.raraph.fr/moonlight
