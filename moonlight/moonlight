@@ -1,5 +1,6 @@
-exec docker run -it --rm \
+exec docker run -itd --rm \
   --name moonlight \
+  --ipc host \
   --env DISPLAY \
   --env XAUTHORITY=/tmp/xauth \
   --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
