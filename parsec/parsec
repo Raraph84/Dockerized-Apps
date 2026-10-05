@@ -1,6 +1,8 @@
+#!/bin/sh
 exec docker run -itd --rm \
   --name parsec \
   --user 0:0 \
+  --hostname $(hostname) \
   --env DISPLAY \
   --env XAUTHORITY=/tmp/xauth \
   --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
