@@ -8,4 +8,5 @@ exec docker run -itd --rm \
   --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
   --volume $XAUTHORITY:/tmp/xauth:ro \
   --volume ~/.config/moonlight:"/root/.config/Moonlight Game Streaming Project" \
+  --device /dev/dri \
   docker.raraph.fr/moonlight

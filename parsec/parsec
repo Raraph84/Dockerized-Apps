@@ -8,4 +8,5 @@ exec docker run -itd --rm \
   --volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
   --volume $XAUTHORITY:/tmp/xauth:ro \
   --volume ~/.config/parsec:/root/.parsec \
+  --device /dev/dri \
   ghcr.io/jaredallard/docker-parsec:main app_daemon=1
